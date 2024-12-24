@@ -275,6 +275,267 @@ margin-bottom: 4rem;
 .Services-list div:hover {
     transform: translateY(-10px);
 }
+
+section{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container1{
+    width: 600px;
+    height: 500px;
+    padding: 75px 90px;
+    margin-left: 120px;   
+}
+
+.heading1{
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 5px;
+    margin-bottom: 50px;
+}
+
+.bar{
+    font-size: 23px;
+}
+
+.Technical-bars .bar {
+       margin-top: 40px 0;
+}
+
+.Technical-bars .bar:first-child{
+    margin-top: 0;
+}
+
+.Technical-bars .bar:last-child{
+    margin-bottom: 0;
+}
+.Technical-bars .bar .info{
+    margin-bottom: 5px;
+}
+.Technical-bars .bar .info .span{
+    font-size: 17px;
+    font-weight: 500;
+    animation: showText 0.5s 1s linear forwards;
+    opacity: 0;
+}
+.Technical-bars .bar .progress-line{
+    position: relative;
+    border-radius: 10px;
+    width: 100%;
+    height: 5px;
+    background-color: #000000;
+    animation:  animate 1s cubic-bezier(1,0,0.5,1) forwards;
+    transform: scaleX(0);
+    transform-origin:left;
+}
+
+@keyframes animate{
+    100%{
+        transform: scaleX(1);
+    }
+}
+.Technical-bars .bar .progress-line span{
+    height: 100%;
+    background-color: #0ef;
+    position: absolute;
+    border-radius: 10px;
+    animation: animate 1s 1s cubic-bezier(1,0,0.5,1) forwards;
+    transform: scaleX(0);
+    transform-origin: left;  
+}
+
+.progress-line.html span{
+    width: 90%;
+}
+.progress-line.css span{
+    width: 60%;
+}
+
+.progress-line.Javascript span{
+    width: 85%;
+}
+
+.progress-line.python span{
+    width: 90%;
+}
+
+.progress-line.react span{
+    width: 90%;
+}
+
+.progress-line span::after{
+    position: absolute;
+    padding: 1px 8px;
+    background-color: #000;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 3px;
+    top: -20px;
+    right: -20px;
+    animation: showText 0.5s 1.5 linear forwards;
+    opacity: 0;
+}
+
+.progress-line.html span::after{
+content: "90%";
+}
+
+.progress-line.css span::after{
+    content: "60%";
+}
+
+.progress-line.Javascript span::after{
+content: "85%";
+}
+
+.progress-line.python span::after{
+content: "90%";
+}
+
+.progress-line.react span::after{
+content: "90%";
+}
+
+.progress-line span::before{
+    content:"";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 7px solid transparent;
+    border-bottom-width: 0px;
+    border-right-width: 0px;
+    border-top-color: #000;
+    top: -10px;
+    right: 0;
+    animation: showText 0.5s 1.5s linear forwards;
+    opacity: 0;
+}
+
+
+/* Radial Bars Container */
+.radial-bars {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.radial-bars .radial-bar
+{
+    width: 50%;
+    height: 170px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+/* Radial Bar SVG */
+.radial-bars .radial-bar svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-90deg); /* Keeps the progress bar starting at the top */
+    width: 120px; /* Updated size for a more prominent visual */
+    height: 160px; /* Makes it a perfect circle */
+}
+
+/* Progress Bar Circle */
+.radial-bars .radial-bar .progress-bar {
+    stroke-width: 10;
+    stroke: #000; /* Dark background circle */
+    fill: transparent;
+    stroke-dasharray: 502; /* Circumference for 80px radius */
+    stroke-dashoffset: 502; /* Fully visible background */
+    stroke-linecap: round;
+    animation: animate-bar 1s linear forwards;
+}
+
+@keyframes animate-bar{
+    100%{
+        stroke-dashoffset: -1;
+    }
+}
+
+/* Path Circle (Progress Indicator) */
+.path {
+    stroke-width: 10;
+    stroke: #0ef; /* Neon blue for the progress bar */
+    fill: transparent;
+    stroke-dasharray: 502; /* Match the circumference */
+    stroke-dashoffset: 502; /* Initially hidden */
+    stroke-linecap: round;
+}
+
+/* Custom Animations for Each Path */
+.path-1 {
+    animation: animate-path1 1s 1s linear forwards;
+}
+.path-2 {
+    animation: animate-path2 1s 1s linear forwards;
+}
+.path-3 {
+    animation: animate-path3 1s 1s linear forwards;
+}
+.path-4 {
+    animation: animate-path4 1s 1s linear forwards;
+}
+
+/* Keyframes for Path Animations */
+@keyframes animate-path1 {
+    100% {
+        stroke-dashoffset: 50; /* For 90% progress */
+    }
+}
+
+@keyframes animate-path2 {
+    100% {
+        stroke-dashoffset: 175; /* For 65% progress */
+    }
+}
+
+@keyframes animate-path3 {
+    100% {
+        stroke-dashoffset: 125; /* For 75% progress */
+    }
+}
+
+@keyframes animate-path4 {
+    100% {
+        stroke-dashoffset: 75; /* For 85% progress */
+    }
+}
+
+.radial-bar .percentage{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 17px;
+    font-weight: 500;
+    animation: showText 0.5s 1s linear forwards;
+    opacity: 0;
+}
+
+.radial-bar .text{
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    bottom: -5px;
+    transform: translateX(-50px);
+    font-size: 17px;
+    font-weight: 500;
+    animation: showText 0.5s 1s linear forwards;
+    opacity: 0;
+}
+
+
+@keyframes showText{
+    100%{
+        opacity: 1;
+    }
+}
+        
 @keyframes slideRight {
     0% {
         transform: translateX(-100px);
