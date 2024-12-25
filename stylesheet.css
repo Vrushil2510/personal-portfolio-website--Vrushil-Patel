@@ -778,9 +778,6 @@ border-radius: 0.5rem;
     0 0 100px cyan, 0 0 200px cyan;
 }
 
-.contact-forms input #submit{
-    
-}
 @keyframes showText{
     100%{
         opacity: 1;
