@@ -161,6 +161,8 @@ body {
 }
 
 .about-img img{
+margin-top: 150px;
+margin-right: -100px;
 padding-bottom: 20%;
 max-width: 630px;
 height: auto;
@@ -491,7 +493,7 @@ content: "90%";
 
 @keyframes animate-path2 {
     100% {
-        stroke-dashoffset: 175; /* For 65% progress */
+        stroke-dashoffset: 75; /* For 85% progress */
     }
 }
 
